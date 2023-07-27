@@ -1,0 +1,2 @@
+# Index
+- [Compact](./compact.md)
