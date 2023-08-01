@@ -7,3 +7,6 @@ This repo has tutorials, how to's and some documentations to help you solve some
 # Azure
 - [Powershell](./azure/powershell.md)
 - [az cli](./azure/az-cli.md)
+
+# Python
+- [Testing](./python/testing.md)
