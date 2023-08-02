@@ -7,6 +7,8 @@ mongodump --uri="mongodb+srv://username:password@my-cluster-pl-1.ayaki.mongodb.n
 
 > The backup is generated on a dump folder
 
+[Official doc](https://www.mongodb.com/docs/database-tools/mongodump/)
+
 
 # restore
 
@@ -16,3 +18,5 @@ mongorestore --uri="mongodb+srv://username:password@my-cluster-pl-1.ayaki.mongod
 ```
 
 > It gets all the collections inside _./dump/_ and restores it on the _database-name_ database.
+
+[Official doc](https://www.mongodb.com/docs/database-tools/mongorestore/)
