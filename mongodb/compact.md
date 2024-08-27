@@ -37,5 +37,32 @@ db.runCommand({
 })
 ```
 
+Usefull script to compact all needed collections:
+```js
+db.getMongo().setReadPref("secondary")
+
+use <database_name>;
+
+const allDbCollections = db.getCollectionNames()
+
+allDbCollections.forEach( collName =>{
+    let collectionStats = db.getCollection(collName).aggregate([{"$collStats":{ storageStats: {} }}]).next()
+
+    let freeSize = collectionStats.storageStats.freeStorageSize / (1024 * 1024)
+    let totalSize = collectionStats.storageStats.totalSize / (1024 * 1024)
+    let percentage = ((freeSize/totalSize) * 100).toFixed(0)
+    let freeSizeGB = (freeSize / 1024).toFixed(0)
+
+    if (rs.isMaster().secondary) {
+        if (percentage >= 10 && freeSizeGB >= 1) {
+            print('Starting to run compact on collection ' + collName)
+            db.runCommand({ "compact": collName })
+        }   
+    } else {
+        print('It is forbbiden to run compact on primary node')
+    }
+})
+```
+
 References: 
 - [Compact](https://www.mongodb.com/docs/manual/reference/command/compact/)
