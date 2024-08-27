@@ -4,6 +4,7 @@ This repo has tutorials, how to's and some documentations to help you solve some
 # MongoDB 
 - [Compact](./mongodb/compact.md)
 - [Dump / Restore](./mongodb/dump-restore.md)
+- [Network commands](./mongodb/network.md)
 
 # Azure
 - [Powershell](./azure/powershell.md)
