@@ -12,7 +12,7 @@ java --version
 - [You must install Maven on your machine](https://maven.apache.org/download.cgi)
 
 ```sh
-mvn -v
+mvn --version
 ```
 
   
