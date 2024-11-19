@@ -6,7 +6,7 @@
 It seems that the default installed JDK is from Adoptium's Temurin.
 
 ```sh
-java -v
+java --version
 ```
 
 - [You must install Maven on your machine](https://maven.apache.org/download.cgi)
