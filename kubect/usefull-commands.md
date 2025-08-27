@@ -1,5 +1,15 @@
 # Usefull commands
 
+Autheticating using a environment variable
+```sh
+$Env:KUBECONFIG="./aks-name.yaml"
+```
+
+Connecting to a POD:
+```sh
+kubectl exec --stdin --tty copy-customer-accounts-54c668d4f-ztpgt --namespace cloudeng-tools -- /bin/bash
+```
+
 Getting all logs from all pods in a deployment:
 ```sh
 kubectl logs deployment/ingress-nginx-controller -n ingress-internal --all-containers=true > nginx-logs.txt
@@ -24,3 +34,4 @@ Remove all pods in SUCCEEDED/COMPLETED status in a specific namespace
 ```sh
 kubectl get pods --field-selector=status.phase=Succeeded -n database-monitoring -o json | kubectl delete -f -
 ```
+
