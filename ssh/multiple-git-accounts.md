@@ -85,7 +85,7 @@ Host github-work.com
 Host ssh.dev.azure.com
     HostName ssh.dev.azure.com
     User git
-    IdentityFile C:\Users\gabriel.richter\.ssh\id_azuredevops_professional
+    IdentityFile C:\Users\my.user\.ssh\id_azuredevops_professional
 ```
 
 > Note that for GitHub Professional Account what are using an alias for the host `github-work.com` instead of `github.com`
@@ -100,16 +100,16 @@ Copy the public key content and add it to your Git provider accounts.
 
 **Windows:**
 ```bash
-type C:\Users\gabriel.richter\.ssh\id_github_personal.pub
-type C:\Users\gabriel.richter\.ssh\id_github_professional.pub
-type C:\Users\gabriel.richter\.ssh\id_azuredevops_professional.pub
+type C:\Users\my.user\.ssh\id_github_personal.pub
+type C:\Users\my.user\.ssh\id_github_professional.pub
+type C:\Users\my.user\.ssh\id_azuredevops_professional.pub
 ```
 
 **Linux/Mac:**
 ```bash
 cat ~/.ssh/id_github_personal.pub
-cat ~/.ssh/id_github_abinbev.pub
-cat ~/.ssh/id_azuredevops_ambev.pub
+cat ~/.ssh/id_github_professional.pub
+cat ~/.ssh/id_azuredevops_professional.pub
 ```
 
 ### Add to GitHub
@@ -179,7 +179,7 @@ C:.
 
 ### Global Git Config
 
-Edit `C:\Users\gabriel.richter\.gitconfig` (or `~/.gitconfig` on Linux/Mac):
+Edit `C:\Users\my.user\.gitconfig` (or `~/.gitconfig` on Linux/Mac):
 
 ```ini
 [user]
